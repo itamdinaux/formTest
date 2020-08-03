@@ -65,7 +65,6 @@ const Home = () => {
                 aria-label="select-2"
                 id="select-2"
                 value="select 2"
-                onClick={checkTheBoxTwo}
               />
               select 2
             </label>
