@@ -1,17 +1,14 @@
 import React, { useState } from "react"
 import "../css/contact.css"
 const Home = () => {
-  const [counter, setCounter] = useState(1)
-  const plus = () => {
-    setCounter(counter + 1)
+  const [checkBoxTwo, setCheckBoxTwo] = useState(1)
+  const checkTheBoxTwo = () => {
+    setCheckBoxTwo(checkBoxTwo => !checkBoxTwo)
   }
-  const zero = () => {
-    setCounter(counter => 0)
-  }
-  console.log(counter)
+
   return (
     <div>
-      <h2>Contact form</h2>
+      <h1>Contact form</h1>
       <form name="contact" method="POST" data-netlify="true" action="/success">
         <input
           type="hidden"
@@ -19,122 +16,75 @@ const Home = () => {
           value="contact"
           aria-label="contact"
         />
-
-        <div className="element">
-          <label htmlFor="mail">Your Email:</label>
-          <input type="email" name="email" aria-label="mail" />
+        <div>
+          <h2>Coordonées</h2>
+          <p>
+            <label htmlFor="name">
+              Nom :
+              <input type="text" name="name" aria-label="name" />
+            </label>
+          </p>
+          <p>
+            <label htmlFor="mail">
+              Mail :
+              <input type="mail" name="mail" aria-label="mail" />
+            </label>
+          </p>
         </div>
-
-        <div className="element">
-          <label htmlFor="list">List Option:</label>
-          <select name="list-option">
-            <option value="one">One</option>
-            <option value="two">Two</option>
-          </select>
-        </div>
-
-        <div className="element">
-          <h3>CheckBox:</h3>
-          <div className="box">
-            <input
-              type="checkbox"
-              name="checkbox-1"
-              aria-label="checkbox-1"
-              id="checkbox-1"
-              value="ok"
-            />
-            <label htmlFor="checkbox-1" for="checkbox-1">
-              First Check Box
-            </label>
-          </div>
-          <div className="box">
-            <input
-              type="checkbox"
-              name="checkbox-2"
-              aria-label="checkbox-2"
-              id="checkbox-2"
-              value="ok"
-            />
-            <label htmlFor="checkbox-2" for="checkbox-2">
-              Second Check Box
-            </label>
-          </div>
-        </div>
-
-        <div className="element">
-          <label htmlFor="radio">Radio List</label>
-          <div className="box">
-            <input
-              type="radio"
-              name="radioChoice"
-              aria-label="radio-1"
-              id="radio-1"
-              value="ok 1"
-              onClick={plus}
-            />
-            <label htmlFor="radio-1" for="radio-1">
-              First Radio choice
-            </label>
-          </div>
-          <div className="box">
-            <input
-              type="radio"
-              name="radioChoice"
-              aria-label="radio-2"
-              id="radio-2"
-              value="ok 2"
-              onClick={plus}
-            />
-            <label htmlFor="radio-2" for="radio-2">
-              Second Radio choice
-            </label>
-          </div>
-          <div className="box">
-            <input
-              type="radio"
-              name="radioChoice"
-              aria-label="radio-3"
-              id="radio-3"
-              value="ok 3"
-              onClick={zero}
-            />
-            <label htmlFor="radio-3" for="radio-3">
-              Third Radio choice
-            </label>
-          </div>
-          <div className={counter === 0 ? "open" : "closed"}>
-            <label htmlFor="subcheckbox">Radio 2 Sub element:</label>
-
-            <div className="box">
+        <div>
+          <h2>Selection option</h2>
+          <p>
+            <label htmlFor="select-1">
               <input
                 type="checkbox"
-                name="checkbox-1"
-                aria-label="checkbox-sub-1"
-                id="checkbox-sub-1"
-                value="ok 1"
+                name="select"
+                aria-label="select-1"
+                id="select-1"
+                value="select 1"
               />
-              <label htmlFor="checkbox-sub-1" for="checkbox-sub-1">
-                First SubCheck Box
-              </label>
-            </div>
-            <div className="box">
+              select 1
+            </label>
+          </p>
+          <p>
+            <label htmlFor="select-2">
               <input
                 type="checkbox"
-                name="checkbox-sub-2"
-                aria-label="checkbox-sub-2"
-                id="checkbox-sub-2"
-                value="ok 2"
+                name="select"
+                aria-label="select-2"
+                id="select-2"
+                value="select 2"
+                onClick={checkTheBoxTwo}
               />
-              <label htmlFor="checkbox-sub-2" for="checkbox-sub-2">
-                Second SubCheck Box
-              </label>
-            </div>
-          </div>
+              select 2
+            </label>
+          </p>
         </div>
-
-        <div className="element">
-          <label htmlFor="msg">Message:</label>
-          <textarea name="message" aria-label="msg" />
+        <div className={!checkBoxTwo ? "open" : "closed"}>
+          <h3>element of CheckBox 2</h3>
+          <p>
+            <label htmlFor="radio-1">
+              <input
+                type="radio"
+                name="select"
+                aria-label="radio-1"
+                id="radio-1"
+                value="selection radio 1"
+              />
+              Selection radio 1
+            </label>
+          </p>
+          <p>
+            <label htmlFor="radio-2">
+              <input
+                type="radio"
+                name="select"
+                aria-label="radio-2"
+                id="radio-2"
+                value="selection radio 2"
+              />
+              Selection radio 2
+            </label>
+          </p>
         </div>
 
         <button type="submit">Send</button>
