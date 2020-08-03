@@ -36,9 +36,9 @@ const Home = () => {
           <p>
             <label>
               List of subject
-              <select name="role[]">
+              <select name="Sujet">
                 <option value="sujet-1">Subject 1</option>
-                <option value="sujet 2">Subject 2</option>
+                <option value="sujet-2">Subject 2</option>
               </select>
             </label>
           </p>
