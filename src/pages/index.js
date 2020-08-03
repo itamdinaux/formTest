@@ -85,7 +85,7 @@ const Home = () => {
                 type="radio"
                 aria-label="radio-1"
                 id="radio-1"
-                name="select"
+                name="select radio 1"
                 value="rps selection radio 1"
               />
               Selection radio 1
@@ -97,7 +97,7 @@ const Home = () => {
                 type="radio"
                 aria-label="radio-2"
                 id="radio-2"
-                name="select"
+                name="select radio 2"
                 value="rps selection radio 2"
               />
               Selection radio 2
