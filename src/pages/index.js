@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import "../css/contact.css"
 const Home = () => {
-  const [checkBoxTwo, setCheckBoxTwo] = useState(1)
+  const [checkBoxTwo, setCheckBoxTwo] = useState(false)
   const checkTheBoxTwo = () => {
     setCheckBoxTwo(checkBoxTwo => !checkBoxTwo)
   }
@@ -55,9 +55,9 @@ const Home = () => {
             <label htmlFor="select-1">
               <input
                 type="checkbox"
-                name="select 1"
                 aria-label="select-1"
                 id="select-1"
+                name="select 1"
                 value="rps select 1"
               />
               select 1
@@ -67,25 +67,26 @@ const Home = () => {
             <label htmlFor="select-2">
               <input
                 type="checkbox"
-                name="select 2"
                 aria-label="select-2"
                 id="select-2"
+                name="select 2"
                 value="rps select 2"
+                onClick={checkTheBoxTwo}
               />
               select 2
             </label>
           </p>
         </div>
-        <div className={!checkBoxTwo ? "open" : "closed"}>
+        <div className={checkBoxTwo ? "open" : "closed"}>
           <h3>element of CheckBox 2</h3>
           <p>
             <label htmlFor="radio-1">
               <input
                 type="radio"
-                name="select"
                 aria-label="radio-1"
                 id="radio-1"
-                value="selection radio 1"
+                name="select"
+                value="rps selection radio 1"
               />
               Selection radio 1
             </label>
@@ -94,10 +95,10 @@ const Home = () => {
             <label htmlFor="radio-2">
               <input
                 type="radio"
-                name="select"
                 aria-label="radio-2"
                 id="radio-2"
-                value="selection radio 2"
+                name="select"
+                value="rps selection radio 2"
               />
               Selection radio 2
             </label>
