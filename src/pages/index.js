@@ -69,7 +69,7 @@ const Home = () => {
               name="radioChoice"
               aria-label="radio-1"
               id="radio-1"
-              value="ok"
+              value="ok 1"
               onClick={plus}
             />
             <label htmlFor="radio-1" for="radio-1">
@@ -82,7 +82,7 @@ const Home = () => {
               name="radioChoice"
               aria-label="radio-2"
               id="radio-2"
-              value="ok"
+              value="ok 2"
               onClick={plus}
             />
             <label htmlFor="radio-2" for="radio-2">
@@ -95,7 +95,7 @@ const Home = () => {
               name="radioChoice"
               aria-label="radio-3"
               id="radio-3"
-              value="ok"
+              value="ok 3"
               onClick={zero}
             />
             <label htmlFor="radio-3" for="radio-3">
@@ -111,7 +111,7 @@ const Home = () => {
                 name="checkbox-1"
                 aria-label="checkbox-sub-1"
                 id="checkbox-sub-1"
-                value="ok"
+                value="ok 1"
               />
               <label htmlFor="checkbox-sub-1" for="checkbox-sub-1">
                 First SubCheck Box
@@ -123,7 +123,7 @@ const Home = () => {
                 name="checkbox-sub-2"
                 aria-label="checkbox-sub-2"
                 id="checkbox-sub-2"
-                value="ok"
+                value="ok 2"
               />
               <label htmlFor="checkbox-sub-2" for="checkbox-sub-2">
                 Second SubCheck Box
