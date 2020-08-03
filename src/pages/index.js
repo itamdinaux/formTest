@@ -11,11 +11,18 @@ const Home = () => {
           value="contact"
           aria-label="contact"
         />
-        <div>
+        <div className="element">
           <label htmlFor="mail">Your Email:</label>
           <input type="email" name="email" aria-label="mail" />
         </div>
-        <div>
+        <div className="element">
+          <label htmlFor="list">List Option:</label>
+          <select name="role[]">
+            <option value="one">One</option>
+            <option value="two">Two</option>
+          </select>
+        </div>
+        <div className="element">
           <label htmlFor="msg">Message:</label>
           <textarea name="message" aria-label="msg" />
         </div>
