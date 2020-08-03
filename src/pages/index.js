@@ -42,6 +42,12 @@ const Home = () => {
               </select>
             </label>
           </p>
+          <p>
+            <label htmlFor="msg">
+              Message
+              <textarea aria-label="msg"></textarea>
+            </label>
+          </p>
         </div>
         <div>
           <h2>Selection option</h2>
