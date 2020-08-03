@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div>
       <h2>Contact form</h2>
-      <form name="contact" method="POST" action="/success">
+      <form name="contact" method="POST" action="/success" data-netlify="true">
         <p className="name">
           <label htmlFor="name">Name</label>
           <input type="text" aria-label="name" />
