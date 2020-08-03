@@ -45,7 +45,7 @@ const Home = () => {
           <p>
             <label htmlFor="msg">
               Message
-              <textarea aria-label="msg"></textarea>
+              <textarea aria-label="msg" name="message"></textarea>
             </label>
           </p>
         </div>
@@ -55,10 +55,10 @@ const Home = () => {
             <label htmlFor="select-1">
               <input
                 type="checkbox"
-                name="select"
+                name="select 1"
                 aria-label="select-1"
                 id="select-1"
-                value="select 1"
+                value="rps select 1"
               />
               select 1
             </label>
@@ -67,10 +67,10 @@ const Home = () => {
             <label htmlFor="select-2">
               <input
                 type="checkbox"
-                name="select"
+                name="select 2"
                 aria-label="select-2"
                 id="select-2"
-                value="select 2"
+                value="rps select 2"
               />
               select 2
             </label>
