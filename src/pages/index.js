@@ -3,7 +3,13 @@ import "../css/contact.css"
 const Home = () => {
   const [field1, setField1] = useState(false)
   const checkField1 = () => {
-    setField1(field1 => !field1)
+    setField1(field1 => true)
+  }
+  const checkField2 = () => {
+    setField1(field1 => false)
+  }
+  const checkField3 = () => {
+    setField1(field1 => false)
   }
 
   return (
@@ -31,14 +37,29 @@ const Home = () => {
           </label>
           <label htmlFor="select2">
             Select 2
-            <input type="radio" name="select" aria-label="select2" />
+            <input
+              type="radio"
+              name="select"
+              aria-label="select2"
+              onClick={() => {
+                checkField2()
+              }}
+            />
           </label>
           <label htmlFor="select3">
             Select 3
-            <input type="radio" name="select" aria-label="select3" />
+            <input
+              type="radio"
+              name="select"
+              aria-label="select3"
+              onClick={() => {
+                checkField3()
+              }}
+            />
           </label>
         </div>
-        {field1 ? (
+
+        {field1 && (
           <>
             <div>
               <h2>Sub 1</h2>
@@ -48,8 +69,6 @@ const Home = () => {
               </label>
             </div>
           </>
-        ) : (
-          ""
         )}
 
         <button type="submit">Send</button>
