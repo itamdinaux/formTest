@@ -8,72 +8,66 @@ const Home = () => {
   const checkField2 = () => {
     setField1(field1 => false)
   }
-  const checkField3 = () => {
-    setField1(field1 => false)
-  }
 
   return (
-    <div>
-      <h1>Contact form</h1>
-      <form name="contact" method="POST" data-netlify="true" action="/success">
-        <input
-          type="hidden"
-          name="form-name"
-          value="contact"
-          aria-label="contact"
-        />
+    <>
+      <form
+        method="post"
+        action="https://www.flexyform.com/f/59e9130b09ff53241979a03ab00ba74b9bb41f70"
+      >
         <div>
-          <h2>Select</h2>
-          <label htmlFor="select1">
-            Select 1
-            <input
-              type="radio"
-              name="select"
-              aria-label="select1"
-              onClick={() => {
-                checkField1()
-              }}
-            />
-          </label>
-          <label htmlFor="select2">
-            Select 2
-            <input
-              type="radio"
-              name="select"
-              aria-label="select2"
-              onClick={() => {
-                checkField2()
-              }}
-            />
-          </label>
-          <label htmlFor="select3">
-            Select 3
-            <input
-              type="radio"
-              name="select"
-              aria-label="select3"
-              onClick={() => {
-                checkField3()
-              }}
-            />
+          <label htmlFor="fullname">
+            Fullname
+            <input type="text" name="fullname" aria-label="fullname" />
           </label>
         </div>
-
-        {field1 && (
+        <di>
+          <h2>Select</h2>
+          <label htmlFor="element1">
+            <input
+              type="radio"
+              name="select"
+              value="element1"
+              aria-label="element1"
+              onClick={() => checkField1()}
+            />
+            Element 1
+          </label>
+          <label htmlFor="element2">
+            <input
+              type="radio"
+              name="select"
+              value="element2"
+              aria-label="element2"
+              onClick={() => checkField2()}
+            />
+            Element 2
+          </label>
+        </di>
+        {field1 ? (
           <>
             <div>
-              <h2>Sub 1</h2>
-              <label htmlFor="sub1">
-                SubElement 1
-                <input type="text" name="sub1" aria-label="sub1" />
+              <label htmlFor="email">
+                Email
+                <input type="email" name="email" aria-label="email" />
+              </label>
+            </div>
+          </>
+        ) : (
+          <>
+            <div>
+              <label htmlFor="phone">
+                Phone
+                <input type="text" name="phone" aria-label="phone" />
               </label>
             </div>
           </>
         )}
-
-        <button type="submit">Send</button>
+        <div>
+          <button type="submit">Send</button>
+        </div>
       </form>
-    </div>
+    </>
   )
 }
 
